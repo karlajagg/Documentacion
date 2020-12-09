@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProbModelXML formatVersion="0.2.0">
+  <ProbNet type="BayesianNetwork">
+    <DecisionCriteria>
+      <Criterion name="---" unit="---" />
+    </DecisionCriteria>
+    <Properties>
+      <Property name="hasElviraProperties" value="yes" />
+    </Properties>
+    <Variables>
+      <Variable name="AB" type="finiteStates" role="chance">
+        <Coordinates x="116" y="376" />
+        <States>
+          <State name="S5" />
+          <State name="S3" />
+        </States>
+      </Variable>
+      <Variable name="ST" type="finiteStates" role="chance">
+        <Coordinates x="106" y="40" />
+        <States>
+          <State name="S5" />
+          <State name="S2" />
+          <State name="S3" />
+        </States>
+      </Variable>
+      <Variable name="CIM" type="finiteStates" role="chance">
+        <Coordinates x="680" y="35" />
+        <States>
+          <State name="S4" />
+          <State name="S5" />
+        </States>
+      </Variable>
+      <Variable name="EST" type="finiteStates" role="chance">
+        <Coordinates x="382" y="79" />
+        <States>
+          <State name="S4" />
+          <State name="S5" />
+        </States>
+      </Variable>
+      <Variable name="CHC" type="finiteStates" role="chance">
+        <Coordinates x="408" y="340" />
+        <States>
+          <State name="S4" />
+          <State name="S5" />
+        </States>
+      </Variable>
+      <Variable name="CHH" type="finiteStates" role="chance">
+        <Coordinates x="405" y="501" />
+        <States>
+          <State name="S4" />
+          <State name="S5" />
+        </States>
+      </Variable>
+      <Variable name="BRE" type="finiteStates" role="chance">
+        <Coordinates x="739" y="137" />
+        <States>
+          <State name="S4" />
+          <State name="S5" />
+        </States>
+      </Variable>
+      <Variable name="ACC" type="finiteStates" role="chance">
+        <Coordinates x="117" y="211" />
+        <States>
+          <State name="S2" />
+          <State name="S5" />
+          <State name="S3" />
+        </States>
+      </Variable>
+      <Variable name="COM" type="finiteStates" role="chance">
+        <Coordinates x="787" y="484" />
+        <States>
+          <State name="S5" />
+          <State name="S0" />
+        </States>
+      </Variable>
+      <Variable name="NOMS" type="finiteStates" role="chance">
+        <Coordinates x="465" y="171" />
+        <States>
+          <State name="S2" />
+          <State name="S5" />
+        </States>
+      </Variable>
+      <Variable name="TIPO" type="finiteStates" role="chance">
+        <Coordinates x="794" y="286" />
+        <States>
+          <State name="No falla" />
+          <State name="E2.1=EXTRAORDINARIA (VANDALISMO)" />
+          <State name="E2.2=EXTRAORDINARIA (FENOMENOS NATURALES)" />
+          <State name="B0= DESCARGA ATMOSFERICA" />
+          <State name="C0= VIENTOS FUERTES" />
+          <State name="A6= CONTAMINACION" />
+        </States>
+      </Variable>
+    </Variables>
+    <Links>
+      <Link directed="true">
+        <Variable name="AB" />
+        <Variable name="COM" />
+      </Link>
+      <Link directed="true">
+        <Variable name="ST" />
+        <Variable name="CIM" />
+      </Link>
+      <Link directed="true">
+        <Variable name="ST" />
+        <Variable name="COM" />
+      </Link>
+      <Link directed="true">
+        <Variable name="CIM" />
+        <Variable name="EST" />
+      </Link>
+      <Link directed="true">
+        <Variable name="CIM" />
+        <Variable name="NOMS" />
+      </Link>
+      <Link directed="true">
+        <Variable name="EST" />
+        <Variable name="AB" />
+      </Link>
+      <Link directed="true">
+        <Variable name="CHC" />
+        <Variable name="AB" />
+      </Link>
+      <Link directed="true">
+        <Variable name="CHC" />
+        <Variable name="CHH" />
+      </Link>
+      <Link directed="true">
+        <Variable name="CHC" />
+        <Variable name="COM" />
+      </Link>
+      <Link directed="true">
+        <Variable name="CHH" />
+        <Variable name="ACC" />
+      </Link>
+      <Link directed="true">
+        <Variable name="BRE" />
+        <Variable name="EST" />
+      </Link>
+      <Link directed="true">
+        <Variable name="BRE" />
+        <Variable name="CHH" />
+      </Link>
+      <Link directed="true">
+        <Variable name="ACC" />
+        <Variable name="AB" />
+      </Link>
+      <Link directed="true">
+        <Variable name="NOMS" />
+        <Variable name="AB" />
+      </Link>
+      <Link directed="true">
+        <Variable name="NOMS" />
+        <Variable name="CHC" />
+      </Link>
+      <Link directed="true">
+        <Variable name="NOMS" />
+        <Variable name="ACC" />
+      </Link>
+      <Link directed="true">
+        <Variable name="NOMS" />
+        <Variable name="COM" />
+      </Link>
+    </Links>
+    <Potentials>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="AB" />
+          <Variable name="EST" />
+          <Variable name="CHC" />
+          <Variable name="ACC" />
+          <Variable name="NOMS" />
+        </Variables>
+        <Values>0.8928571428571429 0.10714285714285714 0.5 0.5 0.5 0.5 0.5 0.5 0.9625 0.0375 0.5 0.5 0.1206896551724138 0.8793103448275862 0.8333333333333334 0.16666666666666666 0.5 0.5 0.5 0.5 0.6094890510948905 0.3905109489051095 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.3625 0.6375 0.9841772151898734 0.015822784810126583 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5</Values>
+      </Potential>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="ST" />
+        </Variables>
+        <Values>0.9518652226233454 0.032490974729241874 0.015643802647412757</Values>
+      </Potential>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="CIM" />
+          <Variable name="ST" />
+        </Variables>
+        <Values>0.6502525252525253 0.34974747474747475 0.03571428571428571 0.9642857142857143 0.07142857142857142 0.9285714285714286</Values>
+      </Potential>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="EST" />
+          <Variable name="CIM" />
+          <Variable name="BRE" />
+        </Variables>
+        <Values>0.998046875 0.001953125 0.0031645569620253164 0.9968354430379747 0.16666666666666666 0.8333333333333334 0.5 0.5</Values>
+      </Potential>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="CHC" />
+          <Variable name="NOMS" />
+        </Variables>
+        <Values>0.23972602739726026 0.7602739726027398 0.0025380710659898475 0.9974619289340102</Values>
+      </Potential>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="CHH" />
+          <Variable name="CHC" />
+          <Variable name="BRE" />
+        </Variables>
+        <Values>0.9905660377358491 0.009433962264150943 0.0013850415512465374 0.9986149584487535 0.5 0.5 0.8333333333333334 0.16666666666666666</Values>
+      </Potential>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="BRE" />
+        </Variables>
+        <Values>0.9939759036144579 0.006024096385542169</Values>
+      </Potential>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="ACC" />
+          <Variable name="CHH" />
+          <Variable name="NOMS" />
+        </Variables>
+        <Values>0.24324324324324326 0.7477477477477478 0.009009009009009009 0.0030211480362537764 0.17220543806646527 0.824773413897281 0.3333333333333333 0.3333333333333333 0.3333333333333333 0.002531645569620253 0.9949367088607595 0.002531645569620253</Values>
+      </Potential>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="COM" />
+          <Variable name="AB" />
+          <Variable name="ST" />
+          <Variable name="CHC" />
+          <Variable name="NOMS" />
+        </Variables>
+        <Values>0.9901960784313726 0.00980392156862745 0.8333333333333334 0.16666666666666666 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.398876404494382 0.601123595505618 0.9936708860759493 0.006329113924050633 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.5 0.8178807947019867 0.18211920529801323 0.9821428571428571 0.017857142857142856 0.03571428571428571 0.9642857142857143 0.5 0.5 0.07142857142857142 0.9285714285714286 0.5 0.5</Values>
+      </Potential>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="NOMS" />
+          <Variable name="CIM" />
+        </Variables>
+        <Values>0.8468992248062015 0.15310077519379844 0.0031645569620253164 0.9968354430379747</Values>
+      </Potential>
+      <Potential type="Table" role="conditionalProbability">
+        <Variables>
+          <Variable name="TIPO" />
+        </Variables>
+        <Values>0.9748201438848921 0.0035971223021582736 0.0035971223021582736 0.01079136690647482 0.0035971223021582736 0.0035971223021582736</Values>
+      </Potential>
+    </Potentials>
+  </ProbNet>
+  <InferenceOptions>
+    <MulticriteriaOptions>
+      <SelectedAnalysisType>UNICRITERION</SelectedAnalysisType>
+      <Unicriterion>
+        <Scales>
+          <Scale Criterion="---" Value="1.0" />
+        </Scales>
+      </Unicriterion>
+      <CostEffectiveness>
+        <Scales>
+          <Scale Criterion="---" Value="1.0" />
+        </Scales>
+        <CE_Criteria>
+          <CE_Criterion Criterion="---" Value="Cost" />
+        </CE_Criteria>
+      </CostEffectiveness>
+    </MulticriteriaOptions>
+  </InferenceOptions>
+</ProbModelXML>
